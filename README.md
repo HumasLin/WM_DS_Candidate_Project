@@ -1,6 +1,6 @@
 Hi!
 
-This is Haomin Lin, here I include my solution to the DS Candidate Project from WarnerMedia. This is a very interesting project, and I enjoyed it very much! Thank you for preparing it for me!
+This is Haomin Lin, here I include my solution to the DS Candidate Project from WarnerMedia. This is a very interesting project, and I enjoyed it very much! Thank you for preparing it!
 
 There are two Jupyter notebooks covering different part of the project. The first one `WM_project_EDA.ipynb`includes the Exploratory Data Analysis on the data, where I investigate how the data are distributed and also include some sanity check.
 
