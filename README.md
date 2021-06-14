@@ -11,3 +11,21 @@ Thank you so much! Please let me know if you have any questions :)
 All the best,
 
 Haomin
+
+-------
+
+**Update on web application**
+
+Based on the above two notebooks, I've created a web application based on `Streamlit`. It can be used to explore the analysis and modeling in this project.
+
+Before you run the application, please make sure you have all the preset packages by running
+```
+pip install -r requirements.txt
+```
+in your shell (*pip3 for python3*).
+
+Then, to run this application, simply go to the directory and run:
+```
+streamlit run app.py
+```
+If the website doesn't launch automatically, you may need to go to `http://localhost:8501` in your browser. With it lauched, you can easily interact with the application to see the results.
