@@ -25,14 +25,12 @@ def main():
     def load_data():
         music = pd.read_csv("wm_project.csv")
         music_value = music.dropna().drop(['id','track','uri'],axis=1)
-        return music_value
-    
+        return music_value    
     data = load_data()
     
     st.sidebar.subheader("Choose Mode")
     mode = st.sidebar.selectbox("Mode", ("Exploratory Data Analysis","Model Analysis", 
                                          "Feature Analysis", "Expanded Data"))
-
     if mode == "Exploratory Data Analysis":
         st.sidebar.subheader("Exploratory Data Analysis")
         section = st.sidebar.selectbox("Section", ("Correlation Heatmap","Distribution Analysis", 
@@ -61,8 +59,7 @@ def main():
 
         st.sidebar.subheader("Model Development")
         stage = st.sidebar.selectbox("Stage", ("Decade Encoded", "Remove Correlation", 
-                                               "Get Dummies","xgBoost Model"))
-        
+                                               "Get Dummies","xgBoost Model"))        
         st.subheader("Model Performance")
         modeling = get_model(features,labels,stage) 
         clf, X_test, y_test = modeling[0], modeling[1], modeling[2]
@@ -94,8 +91,7 @@ def main():
     if mode == "Expanded Data":
         st.sidebar.subheader("Analyze Expanded Dataset")
         eda_columns = [col for col in list(data.columns) if col not in ['hit','artist','sections','decade']]
-        features = st.sidebar.multiselect("Features of Interest",tuple(eda_columns))
-        
+        features = st.sidebar.multiselect("Features of Interest",tuple(eda_columns))        
         extend_dataset(features)
 
     if st.sidebar.checkbox("Show Data Description", False):
