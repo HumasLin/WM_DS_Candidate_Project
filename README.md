@@ -29,3 +29,5 @@ Then, to run this application, simply go to the directory and run:
 streamlit run app.py
 ```
 If the website doesn't launch automatically, you may need to go to `http://localhost:8501` in your browser. With it lauched, you can easily interact with the application to see the results.
+
+*Also, due to the large size of random forest model, the three random forest model is not published, it may take some time to run for the first time of implementation*
